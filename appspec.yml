@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/app/testapp
+hooks:
+  BeforeInstall:
+    - location: scripts/beforeinstall.sh
+  AfterInstall:
+    - location: scripts/afterinstall.sh
+  ApplicationStart:
+    - location: scripts/start.sh
+  ApplicaitonStop:
+    - location: scripts/stop.sh
